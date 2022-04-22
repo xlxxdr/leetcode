@@ -1,5 +1,6 @@
 package code.tools;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -31,11 +32,11 @@ public class Asserts {
 
 	public static void equals(int[] expect, int[] actual) {
 		if (expect.length != actual.length) {
-			throw new IllegalStateException("expect: " + expect + ",actual: " + actual);
+			throw new IllegalStateException("expect: " + Arrays.toString(expect) + ",actual: " + Arrays.toString(actual));
 		}
 		for (int i = 0; i < expect.length; i++) {
 			if (expect[i] != actual[i]) {
-				throw new IllegalStateException("expect: " + expect + ",actual: " + actual);
+				throw new IllegalStateException("expect: " + Arrays.toString(expect) + ",actual: " + Arrays.toString(actual));
 			}
 		}
 	}
