@@ -1,4 +1,4 @@
-package code;
+package code.array;
 
 import code.tools.Asserts;
 
