@@ -63,19 +63,16 @@ public class _141_hasCycle {
 	}
 
 	public boolean hasCycle(ListNode head) {
-		ListNode current = head;
-		ListNode forward = head.next;
-		if (forward == null) {
-			return false;
-		}
-		while (forward != null) {
-			current = current.next;
-			forward = forward.next;
-			if (current == forward){
+		ListNode slow = head;
+		ListNode fast = head;
+		while (fast != null && fast.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+			if (slow == fast){
 				return true;
 			}
 		}
-		return true;
+		return false;
 	}
 
 }

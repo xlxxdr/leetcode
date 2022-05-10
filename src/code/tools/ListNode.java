@@ -12,7 +12,7 @@ public class ListNode {
 		this.val = val;
 	}
 
-	ListNode(int val, ListNode next) {
+	public ListNode(int val, ListNode next) {
 		this.val = val;
 		this.next = next;
 	}
@@ -38,10 +38,22 @@ public class ListNode {
 	}
 
 	public static void print(ListNode node) {
+		StringBuilder sb = new StringBuilder("ListNode[");
 		while (node != null) {
-			System.out.print(node.val + ",");
+			sb.append(node.val);
+			if (node.next !=null){
+				sb.append(",");
+			}
 			node = node.next;
 		}
+		sb.append("]");
+		System.out.println(sb.toString());
+	}
+
+	@Override
+	public String toString() {
+		return "ListNode{" +
+			"val=" + val +"}";
 	}
 
 	public static void main(String[] args) {
