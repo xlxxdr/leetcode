@@ -3,6 +3,9 @@ package leetbook.linkedlist;
 import tools.Asserts;
 import tools.ListNode;
 
+import java.util.Deque;
+import java.util.concurrent.LinkedBlockingDeque;
+
 public class isPalindrome {
 
 	public static void main(String[] args) {
@@ -53,5 +56,28 @@ public class isPalindrome {
 			}
 			return true;
 		}
+	}
+
+	public boolean isPalindrome2(ListNode head) {
+		if (head.next == null){
+			return true;
+		}
+		Deque<Integer> deque = new LinkedBlockingDeque();
+		while (head != null){
+			deque.add(head.val);
+			head = head.next;
+		}
+		// 两端出
+		while (!deque.isEmpty()) {
+			Integer first = deque.pollFirst();
+			Integer integer = deque.pollLast();
+			if (first != integer){
+				return false;
+			}
+			if (deque.size() == 1){
+				break;
+			}
+		}
+		return true;
 	}
 }

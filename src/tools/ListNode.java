@@ -38,16 +38,24 @@ public class ListNode {
 	}
 
 	public static void print(ListNode node) {
+		System.out.println(getString(node));
+	}
+
+	public static String getString(ListNode node) {
 		StringBuilder sb = new StringBuilder("ListNode[");
 		while (node != null) {
 			sb.append(node.val);
-			if (node.next !=null){
+			if (node.next != null) {
 				sb.append(",");
 			}
 			node = node.next;
 		}
 		sb.append("]");
-		System.out.println(sb.toString());
+		return sb.toString();
+	}
+
+	public static ListNode parseListNode(int ... nums) {
+		return parseListNodeFromArray(nums);
 	}
 
 	@Override
