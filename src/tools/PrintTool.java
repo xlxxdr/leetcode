@@ -1,4 +1,4 @@
-package code.tools;
+package tools;
 
 public class PrintTool {
 

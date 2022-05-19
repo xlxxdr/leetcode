@@ -1,4 +1,7 @@
 package code.binarysearch;
+
+import tools.Asserts;
+
 //给你一个下标从 1 开始的整数数组 numbers ，该数组已按 非递减顺序排列 ，请你从数组中找出满足相加之和等于目标数 target 的两个数。如果设这
 //两个数分别是 numbers[index1] 和 numbers[index2] ，则 1 <= index1 < index2 <= numbers.
 //length 。
@@ -46,14 +49,61 @@ package code.binarysearch;
 // Related Topics 数组 双指针 二分查找 👍 786 👎 0
 public class _167_twoSum {
 
-    public static void main(String[] args) {
-        _167_twoSum app = new _167_twoSum();
+	public static void main(String[] args) {
+		_167_twoSum app = new _167_twoSum();
+		Asserts.equals(new int[] {3, 4}, app.twoSum(new int[] {0, 0, 3, 3}, 6));
+		Asserts.equals(new int[] {1, 2}, app.twoSum(new int[] {0, 0, 3, 4}, 0));
+		Asserts.equals(new int[] {1, 2}, app.twoSum(new int[] {2, 7, 11, 15}, 9));
+		Asserts.equals(new int[] {1, 3}, app.twoSum(new int[] {2, 3, 4}, 6));
+		Asserts.equals(new int[] {1, 2}, app.twoSum(new int[] {-1, 0}, -1));
 
-    }
+	}
 
-    public int[] twoSum(int[] numbers, int target) {
-        int left = 0;
-        int right = -1;
-        return new int[2];
-    }
+	public int[] twoSum(int[] numbers, int target) {
+		int pos1 = -1;
+		int pos2 = -1;
+		for (int i = 0; i < numbers.length; i++) {
+			// 循环遍历每一个数，用target - 当前的数 得到新的目标值
+			// newTarget =  target - numbers[i] 这样会将区间划分为两部分
+			// 如果当前值大于 newTarget，则说明在左区间
+			// 如果当前值小于 newTarget, 则说明在右区间
+			int curVal = numbers[i];
+			int newTarget = target - numbers[i];
+			if (newTarget > curVal) {
+				pos1 = i;
+				pos2 = binarySearch(i + 1, numbers.length - 1, numbers, newTarget);
+				if (pos2 != -1) {
+					return new int[] {pos1 + 1, pos2 + 1};
+				} else {
+					continue;
+				}
+			}
+			if (newTarget <= curVal) {
+				pos2 = i;
+				pos1 = binarySearch(0, i - 1, numbers, newTarget);
+				if (pos1 != -1) {
+					return new int[] {pos1 + 1, pos2 + 1};
+				} else {
+					continue;
+				}
+			}
+		}
+		return new int[] {-1, -1};
+	}
+
+	private int binarySearch(int begin, int end, int[] numbers, int newTarget) {
+		int left = begin;
+		int right = end;
+		while (left <= right) {
+			int mid = left + ((right - left) >> 1);
+			if (numbers[mid] == newTarget) {
+				return mid;
+			} else if (numbers[mid] < newTarget) {
+				left = mid + 1;
+			} else if (numbers[mid] > newTarget) {
+				right = mid - 1;
+			}
+		}
+		return -1;
+	}
 }

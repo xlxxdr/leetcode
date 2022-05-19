@@ -1,6 +1,6 @@
 package code.competition;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 /*
 给你一个由若干数字（0 - 9）组成的字符串 s ，和一个整数。

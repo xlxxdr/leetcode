@@ -1,6 +1,6 @@
 package code.string;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 /*
 给你一个整数 columnNumber ，返回它在 Excel 表中相对应的列名称。

@@ -1,6 +1,6 @@
 package code.string;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 import java.util.HashSet;
 import java.util.Set;

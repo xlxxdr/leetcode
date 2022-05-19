@@ -1,6 +1,6 @@
 package code.string;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 /*
 给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。
@@ -29,11 +29,11 @@ public class _125_IsPalindrome {
 
 	public static void main(String[] args) {
 		_125_IsPalindrome app = new _125_IsPalindrome();
-		Asserts.equalsTrue(app.isPalindrome("AA"));
-		Asserts.equalsTrue(app.isPalindrome("A"));
-		Asserts.equalsTrue(app.isPalindrome("010"));
-		Asserts.equalsTrue(app.isPalindrome("A man, a plan, a canal: Panama"));
-		Asserts.equalsFalse(app.isPalindrome("race a car"));
+		Asserts.isTrue(app.isPalindrome("AA"));
+		Asserts.isTrue(app.isPalindrome("A"));
+		Asserts.isTrue(app.isPalindrome("010"));
+		Asserts.isTrue(app.isPalindrome("A man, a plan, a canal: Panama"));
+		Asserts.isFalse(app.isPalindrome("race a car"));
 	}
 
 	public boolean isPalindrome(String s) {

@@ -37,7 +37,7 @@ package code.array;
 //
 // Related Topics 数组 双指针 字符串 👍 236 👎 0
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 public class _821_shortestToChar {
 

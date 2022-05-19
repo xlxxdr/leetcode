@@ -1,4 +1,4 @@
-package code.tools;
+package tools;
 
 import java.util.List;
 

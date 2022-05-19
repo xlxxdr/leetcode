@@ -1,6 +1,6 @@
 package code.stack;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 import java.util.Stack;
 
@@ -41,14 +41,14 @@ public class _20_IsValid {
 
     public static void main(String[] args) {
         _20_IsValid app = new _20_IsValid();
-        Asserts.equalsFalse(app.isValid("(){}}{"));
-        Asserts.equalsFalse(app.isValid("){}}{"));
-        Asserts.equalsFalse(app.isValid("){"));
-        Asserts.equalsTrue(app.isValid("()"));
-        Asserts.equalsTrue(app.isValid("()[]{}"));
-        Asserts.equalsFalse(app.isValid("(]"));
-        Asserts.equalsFalse(app.isValid("([)]"));
-        Asserts.equalsTrue(app.isValid("{[]}"));
+        Asserts.isFalse(app.isValid("(){}}{"));
+        Asserts.isFalse(app.isValid("){}}{"));
+        Asserts.isFalse(app.isValid("){"));
+        Asserts.isTrue(app.isValid("()"));
+        Asserts.isTrue(app.isValid("()[]{}"));
+        Asserts.isFalse(app.isValid("(]"));
+        Asserts.isFalse(app.isValid("([)]"));
+        Asserts.isTrue(app.isValid("{[]}"));
 
     }
 

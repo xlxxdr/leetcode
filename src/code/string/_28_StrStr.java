@@ -1,6 +1,6 @@
 package code.string;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 /*
 实现 strStr() 函数。

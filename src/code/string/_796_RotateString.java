@@ -1,6 +1,6 @@
 package code.string;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 /*
 给定两个字符串, s 和 goal。如果在若干次旋转操作之后，s 能变成 goal ，那么返回 true 。
@@ -28,9 +28,9 @@ public class _796_RotateString {
 
 	public static void main(String[] args) {
 		_796_RotateString app = new _796_RotateString();
-		Asserts.equalsTrue(app.rotateString("abcde", "cdeab"));
-		Asserts.equalsTrue(app.rotateString("ddddd", "ddddd"));
-		Asserts.equalsFalse(app.rotateString("abcde", "abced"));
+		Asserts.isTrue(app.rotateString("abcde", "cdeab"));
+		Asserts.isTrue(app.rotateString("ddddd", "ddddd"));
+		Asserts.isFalse(app.rotateString("abcde", "abced"));
 
 	}
 

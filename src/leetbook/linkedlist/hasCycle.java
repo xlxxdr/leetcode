@@ -1,6 +1,6 @@
 package leetbook.linkedlist;
 
-import code.tools.ListNode;
+import tools.ListNode;
 
 public class hasCycle {
 

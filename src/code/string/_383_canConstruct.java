@@ -3,7 +3,7 @@ package code.string;
 import java.util.Map;
 import java.util.TreeMap;
 
-import code.tools.Asserts;
+import tools.Asserts;
 //给你两个字符串：ransomNote 和 magazine ，判断 ransomNote 能不能由 magazine 里面的字符构成。
 //
 // 如果可以，返回 true ；否则返回 false 。
@@ -47,10 +47,10 @@ public class _383_canConstruct {
 
 	public static void main(String[] args) {
 		_383_canConstruct app = new _383_canConstruct();
-		Asserts.equalsFalse(app.canConstruct("a","b"));
-		Asserts.equalsFalse(app.canConstruct("aa","ab"));
-		Asserts.equalsTrue(app.canConstruct("aa","aa"));
-		Asserts.equalsTrue(app.canConstruct("aa","aab"));
+		Asserts.isFalse(app.canConstruct("a","b"));
+		Asserts.isFalse(app.canConstruct("aa","ab"));
+		Asserts.isTrue(app.canConstruct("aa","aa"));
+		Asserts.isTrue(app.canConstruct("aa","aab"));
 	}
 
 	public boolean canConstruct(String ransomNote, String magazine) {

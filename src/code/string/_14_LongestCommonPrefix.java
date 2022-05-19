@@ -1,6 +1,6 @@
 package code.string;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 /*
 编写一个函数来查找字符串数组中的最长公共前缀。

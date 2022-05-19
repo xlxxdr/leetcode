@@ -1,6 +1,6 @@
 package code.dp;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 /*
 给定一个数组 prices ，它的第 i 个元素 prices[i] 表示一支给定股票第 i 天的价格。

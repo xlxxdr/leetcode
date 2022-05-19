@@ -1,7 +1,7 @@
 package code;
 
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 
 public class _1523_CountOdds {

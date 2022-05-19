@@ -1,6 +1,6 @@
 package code.string;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 //假设有一个同时存储文件和目录的文件系统。下图展示了文件系统的一个示例：
 //

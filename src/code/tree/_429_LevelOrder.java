@@ -1,9 +1,9 @@
 package code.tree;
 
-import code.tools.Node;
 
 import java.util.*;
-import java.util.concurrent.ArrayBlockingQueue;
+
+import tools.Node;
 
 /*
 给定一个 N 叉树，返回其节点值的层序遍历。（即从左到右，逐层遍历）。

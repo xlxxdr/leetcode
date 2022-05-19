@@ -1,4 +1,4 @@
-import code.tools.Asserts;
+import tools.Asserts;
 
 /**
  * 给你长度相等的两个字符串 s1 和 s2 。一次 字符串交换 操作的步骤如下：选出某个字符串中的两个下标（不必不同），并交换这两个下标所对应的字符。
@@ -15,11 +15,11 @@ public class _1790_AreAlmostEqual {
 
 
     public static void main(String[] args) {
-        Asserts.equalsTrue(areAlmostEqual("siyolsdcjthwsiplccjbuceoxmpjgrauocx","siyolsdcjthwsiplccpbuceoxmjjgrauocx"));
-        Asserts.equalsTrue(areAlmostEqual("bank","kanb"));
-        Asserts.equalsFalse(areAlmostEqual("attack","defend"));
-        Asserts.equalsTrue(areAlmostEqual("kelb","kelb"));
-        Asserts.equalsFalse(areAlmostEqual("abcd","dcba"));
+        Asserts.isTrue(areAlmostEqual("siyolsdcjthwsiplccjbuceoxmpjgrauocx","siyolsdcjthwsiplccpbuceoxmjjgrauocx"));
+        Asserts.isTrue(areAlmostEqual("bank","kanb"));
+        Asserts.isFalse(areAlmostEqual("attack","defend"));
+        Asserts.isTrue(areAlmostEqual("kelb","kelb"));
+        Asserts.isFalse(areAlmostEqual("abcd","dcba"));
 
     }
 

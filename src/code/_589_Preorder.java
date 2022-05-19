@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 
-import code.tools.Asserts;
-import code.tools.Node;
+import tools.Asserts;
+import tools.Node;
 
 public class _589_Preorder {
 

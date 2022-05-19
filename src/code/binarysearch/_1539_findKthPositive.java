@@ -1,6 +1,6 @@
 package code.binarysearch;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 public class _1539_findKthPositive {
 

@@ -1,4 +1,4 @@
-package code.tools;
+package tools;
 
 import java.util.Arrays;
 import java.util.List;
@@ -49,16 +49,29 @@ public class Asserts {
 
 	}
 
-	public static void equalsTrue(boolean state) {
+	public static void isTrue(boolean state) {
 		if (!state) {
 			throw new IllegalStateException("expect: true,actual: false");
 		}
 	}
 
-	public static void equalsFalse(boolean state) {
+	public static void isFalse(boolean state) {
 		if (state) {
 			throw new IllegalStateException("expect: false,actual: true");
 		}
 	}
 
+	public static String[] getStringArray(String ... strings){
+		if (strings.length == 0){
+			throw new IllegalStateException("string should not be null");
+		}
+		return strings;
+	}
+
+	public static int[] getIntArray(int ... nums){
+		if (nums.length == 0){
+			throw new IllegalStateException("num should not be null");
+		}
+		return nums;
+	}
 }

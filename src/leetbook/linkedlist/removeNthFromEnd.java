@@ -1,8 +1,6 @@
 package leetbook.linkedlist;
 
-import java.util.List;
-
-import code.tools.ListNode;
+import tools.ListNode;
 
 public class removeNthFromEnd {
 

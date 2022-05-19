@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 public class _977_SortedSquares {
 

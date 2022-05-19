@@ -31,7 +31,7 @@ package code.binarysearch;
 //
 // Related Topics 数学 二分查找 👍 1003 👎 0
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 public class _69_mySqrt {
 

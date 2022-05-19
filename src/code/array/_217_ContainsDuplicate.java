@@ -2,7 +2,7 @@ package code.array;
 
 import java.util.HashMap;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 /**
  * 给你一个整数数组 nums 。如果任一值在数组中出现 至少两次 ，返回 true ；如果数组中每个元素互不相同，返回 false 。
@@ -31,9 +31,9 @@ import code.tools.Asserts;
 public class _217_ContainsDuplicate {
 
 	public static void main(String[] args) {
-		Asserts.equalsTrue(containsDuplicate(new int[] {1, 2, 3, 1}));
-		Asserts.equalsFalse(containsDuplicate(new int[] {1, 2, 3, 4}));
-		Asserts.equalsTrue(containsDuplicate(new int[] {1,1,1,3,3,4,3,2,4,2}));
+		Asserts.isTrue(containsDuplicate(new int[] {1, 2, 3, 1}));
+		Asserts.isFalse(containsDuplicate(new int[] {1, 2, 3, 4}));
+		Asserts.isTrue(containsDuplicate(new int[] {1,1,1,3,3,4,3,2,4,2}));
 	}
 
 	public static boolean containsDuplicate(int[] nums) {

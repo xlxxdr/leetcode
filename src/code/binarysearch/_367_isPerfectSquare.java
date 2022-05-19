@@ -28,18 +28,18 @@ package code.binarysearch;
 //
 // Related Topics 数学 二分查找 👍 384 👎 0
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 public class _367_isPerfectSquare {
 
 	public static void main(String[] args) {
 		_367_isPerfectSquare app = new _367_isPerfectSquare();
-		Asserts.equalsTrue(app.isPerfectSquare(808201));
-		Asserts.equalsTrue(app.isPerfectSquare(1));
-		Asserts.equalsTrue(app.isPerfectSquare(16));
-		Asserts.equalsFalse(app.isPerfectSquare(12));
-		Asserts.equalsFalse(app.isPerfectSquare(14));
-		Asserts.equalsFalse(app.isPerfectSquare(2147483647));
+		Asserts.isTrue(app.isPerfectSquare(808201));
+		Asserts.isTrue(app.isPerfectSquare(1));
+		Asserts.isTrue(app.isPerfectSquare(16));
+		Asserts.isFalse(app.isPerfectSquare(12));
+		Asserts.isFalse(app.isPerfectSquare(14));
+		Asserts.isFalse(app.isPerfectSquare(2147483647));
 
 	}
 

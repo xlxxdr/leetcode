@@ -1,6 +1,6 @@
 package code.dp;
 
-import code.tools.Asserts;
+import tools.Asserts;
 //泰波那契序列 Tn 定义如下：
 //
 // T0 = 0, T1 = 1, T2 = 1, 且在 n >= 0 的条件下 Tn+3 = Tn + Tn+1 + Tn+2

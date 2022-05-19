@@ -1,6 +1,6 @@
 package code;
 
-import code.tools.ListNode;
+import tools.ListNode;
 
 public class _19_RemoveNthFromEnd {
 

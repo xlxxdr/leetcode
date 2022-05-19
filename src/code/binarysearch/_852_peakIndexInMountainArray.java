@@ -1,6 +1,6 @@
 package code.binarysearch;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 //符合下列属性的数组 arr 称为 山脉数组 ：
 //

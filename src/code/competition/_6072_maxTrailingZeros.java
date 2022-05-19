@@ -1,6 +1,6 @@
 package code.competition;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 /*
 转角路径的乘积中最多能有几个尾随零

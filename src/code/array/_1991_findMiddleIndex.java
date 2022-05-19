@@ -1,6 +1,6 @@
 package code.array;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 //给你一个下标从 0 开始的整数数组 nums ，请你找到 最左边 的中间位置 middleIndex （也就是所有可能中间位置下标最小的一个）。
 //

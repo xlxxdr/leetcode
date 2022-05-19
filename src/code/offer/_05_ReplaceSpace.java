@@ -1,6 +1,6 @@
 package code.offer;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 /*
 请实现一个函数，把字符串 s 中的每个空格替换成"%20"。

@@ -1,6 +1,6 @@
 package code.competition;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 import java.util.*;
 /*

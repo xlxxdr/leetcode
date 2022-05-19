@@ -1,7 +1,7 @@
 package code.offer;
 
-import code.tools.Asserts;
-import code.tools.ListNode;
+import tools.Asserts;
+import tools.ListNode;
 
 import java.util.Stack;
 

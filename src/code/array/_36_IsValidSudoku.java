@@ -1,6 +1,6 @@
 package code.array;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class _36_IsValidSudoku {
                 , {'.', '.', '.', '4', '1', '9', '.', '.', '5'}
                 , {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
         });
-        Asserts.equalsTrue(result);
+        Asserts.isTrue(result);
         result = app.isValidSudoku(new char[][]{
                 {'8', '3', '.', '.', '7', '.', '.', '.', '.'}
                 , {'6', '.', '.', '1', '9', '5', '.', '.', '.'}
@@ -32,7 +32,7 @@ public class _36_IsValidSudoku {
                 , {'.', '.', '.', '4', '1', '9', '.', '.', '5'}
                 , {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
         });
-        Asserts.equalsFalse(result);
+        Asserts.isFalse(result);
         boolean result3 = app.isValidSudoku(new char[][]{
                  {'.', '.', '.', '.', '5', '.', '.', '1', '.'}
                 , {'.', '4', '.', '3', '.', '.', '.', '.', '.'}
@@ -44,7 +44,7 @@ public class _36_IsValidSudoku {
                 , {'.', '2', '.', '9', '.', '.', '.', '.', '.'}
                 , {'.', '.', '4', '.', '.', '.', '.', '.', '.'}
         });
-        Asserts.equalsFalse(result3);
+        Asserts.isFalse(result3);
     }
 
     public boolean isValidSudoku(char[][] board) {

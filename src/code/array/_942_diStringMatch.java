@@ -1,6 +1,6 @@
 package code.array;
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 //由范围 [0,n] 内所有整数组成的 n + 1 个整数的排列序列可以表示为长度为 n 的字符串 s ，其中:
 //

@@ -3,7 +3,7 @@ package leetbook.linkedlist;
 import java.util.HashSet;
 import java.util.Set;
 
-import code.tools.ListNode;
+import tools.ListNode;
 
 public class getIntersectionNode {
 

@@ -43,7 +43,7 @@ package code.dp;
 //
 // Related Topics 递归 记忆化搜索 数学 动态规划 👍 448 👎 0
 
-import code.tools.Asserts;
+import tools.Asserts;
 
 public class _509_fib {
 

@@ -1,6 +1,6 @@
 package code.linkedlist;
 
-import code.tools.ListNode;
+import tools.ListNode;
 
 import java.util.LinkedList;
 
