@@ -74,4 +74,33 @@ public class Asserts {
 		}
 		return nums;
 	}
+
+	public static int[] getIntArray(String numStr){
+		numStr = numStr.replaceAll(" ", "");
+		numStr = numStr.substring(1,numStr.length() -1);
+		String[] nums= numStr.split(",");
+		int[] result = new int[nums.length];
+		for (int i = 0; i < nums.length; i++) {
+			result[i] = Integer.parseInt(nums[i]);
+		}
+		return result;
+	}
+
+	public static int[][] getInt2DArrayFromString(String numStr){
+		numStr = numStr.substring(2,numStr.length() - 2);
+		String[] split = numStr.split("],\\[");
+		int row = split.length;
+		int[][] result = new int[row][];
+		for (int i = 0; i < split.length; i++) {
+			String s = split[i];
+			String[] nums = s.split(",");
+			int[] items = new int[nums.length];
+			for (int k = 0; k < nums.length; k++) {
+				items[k] = Integer.parseInt(nums[k]);
+			}
+			result[i] = items;
+		}
+		return result;
+	}
+
 }
