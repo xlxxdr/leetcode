@@ -1,6 +1,7 @@
-package tmp;
+package _2022_05_26;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import tools.Asserts;
@@ -29,7 +30,7 @@ import tools.Node;
 //输出：[1,2,3,6,7,11,14,4,8,12,5,9,13,10]
 //
 //
-//
+//2
 //
 // 提示：
 //
@@ -69,9 +70,27 @@ public class _589_preorder extends Asserts {
 
 	public static void main(String[] args) {
 		_589_preorder app = new _589_preorder();
+		equals(getIntList("[1,2,3,6,7,11,14,4,8,12,5,9,13,10]"),app.preorder(Node.buildTreeFromArray("[1,null,3,2,4,null,5,6]")));
 	}
 
+
+
 	public List<Integer> preorder(Node root) {
-		return new ArrayList<>();
+		if (root == null) {
+			return null;
+		}
+		List<Integer> result = new ArrayList<>();
+		LinkedList<Node> nodes = new LinkedList();
+		nodes.add(root);
+		while (nodes.isEmpty()) {
+			Node node = nodes.getFirst();
+			List<Integer> values = new ArrayList<>();
+			values.add(node.val);
+			result.addAll(values);
+			if (!node.children.isEmpty()){
+				nodes.addAll(0,node.children);
+			}
+		}
+		return result;
 	}
 }

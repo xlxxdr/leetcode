@@ -1,6 +1,4 @@
-package tmp;
-
-import java.util.Arrays;
+package _2022_05_26;
 
 import tools.Asserts;
 //nums1 中数字 x 的 下一个更大元素 是指 x 在 nums2 中对应位置 右侧 的 第一个 比 x 大的元素。
@@ -54,10 +52,29 @@ public class _496_nextGreaterElement extends Asserts {
 
 	public static void main(String[] args) {
 		_496_nextGreaterElement app = new _496_nextGreaterElement();
+		equals(getIntArray("[-1,3,-1]"), app.nextGreaterElement(getIntArray("[4,1,2]"), getIntArray("[1,3,4,2]")));
+		equals(getIntArray("[3,-1]"), app.nextGreaterElement(getIntArray("[2,4]"), getIntArray("[1,2,3,4]")));
+		equals(getIntArray("[-1]"), app.nextGreaterElement(getIntArray("[1]"), getIntArray("[1]")));
+
 	}
 
-
+	//暴力来一发
 	public int[] nextGreaterElement(int[] nums1, int[] nums2) {
-		return new int[]{};
+		int[] result = new int[nums1.length];
+		for (int i = 0; i < nums1.length; i++) {
+			int pos = -1;
+			for (int k = 0; k < nums2.length; k++) {
+				if (nums2[k] == nums1[i]) {
+					pos = k;
+				}
+				if (nums1[i] < nums2[k] && k > pos && pos != -1) {
+					result[i] = nums2[k];
+					break;
+				} else {
+					result[i] = -1;
+				}
+			}
+		}
+		return result;
 	}
 }

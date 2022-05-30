@@ -1,5 +1,6 @@
 package tools;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -49,6 +50,13 @@ public class Asserts {
 
 	}
 
+	public static void equals(ListNode expect, ListNode actual) {
+		if (expect.val != actual.val) {
+			throw new IllegalStateException("expect: " + expect + ",actual: " + actual);
+		}
+
+	}
+
 	public static void isTrue(boolean state) {
 		if (!state) {
 			throw new IllegalStateException("expect: true,actual: false");
@@ -84,6 +92,16 @@ public class Asserts {
 			result[i] = Integer.parseInt(nums[i]);
 		}
 		return result;
+	}
+
+	public static List<Integer> getIntList(String str) {
+		str = str.trim().substring(1,str.length()-1);
+		String[] nums = str.split(",");
+		List<Integer> numList = new ArrayList<>();
+		for (String num : nums) {
+			numList.add(Integer.parseInt(num.trim()));
+		}
+		return numList;
 	}
 
 	public static int[][] getInt2DArrayFromString(String numStr){
