@@ -58,7 +58,6 @@ public class TreeNode {
 		if (data.equals("[]")) {
 			return null;
 		}
-
 		data = data.substring(1, data.length() - 1);
 		String[] values = data.split(",");
 		int rootVal = Integer.parseInt(values[0]);

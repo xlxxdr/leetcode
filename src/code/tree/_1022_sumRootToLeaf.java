@@ -1,4 +1,4 @@
-package tmp;
+package code.tree;
 
 import tools.Asserts;
 import tools.TreeNode;

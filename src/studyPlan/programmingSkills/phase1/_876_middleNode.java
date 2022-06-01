@@ -60,6 +60,7 @@ public class _876_middleNode extends Asserts {
 		for (int i = 0; i < middlePos ; i++) {
 			tmpHead = tmpHead.next;
 		}
+		tmpHead.next = null;
 		return tmpHead;
 	}
 

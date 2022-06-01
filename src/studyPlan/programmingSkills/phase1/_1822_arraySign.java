@@ -1,4 +1,4 @@
-package tmp;
+package studyPlan.programmingSkills.phase1;
 
 import tools.Asserts;
 //已知函数 signFunc(x) 将会根据 x 的正负返回特定值：
@@ -49,10 +49,10 @@ import tools.Asserts;
 //
 // Related Topics 数组 数学 👍 23 👎 0
 
-public class _1882_arraySign extends Asserts {
+public class _1822_arraySign extends Asserts {
 
 	public static void main(String[] args) {
-		_1882_arraySign app = new _1882_arraySign();
+		_1822_arraySign app = new _1822_arraySign();
 		equals(1, app.arraySign(getIntArray("[-1,-2,-3,-4,3,2,1]")));
 		equals(0, app.arraySign(getIntArray("[1,5,0,2,-3]")));
 		equals(-1, app.arraySign(getIntArray("[-1,1,-1,1,-1]")));

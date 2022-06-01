@@ -42,6 +42,14 @@ public class Asserts {
 		}
 	}
 
+	public static void equals(String expect, int[] actual) {
+		String actualStr = PrintTool.printArray(actual);
+		if (!expect.equals(actualStr)) {
+			throw new IllegalStateException("expect: " + expect + ",actual: " + actualStr);
+		}
+
+	}
+
 	public static void equals(int[][] expect, int[][] actual) {
 		if (expect.length != actual.length) {
 			throw new IllegalStateException("expect: " + Arrays.toString(expect) + ",actual: " + Arrays.toString(actual));
@@ -58,21 +66,6 @@ public class Asserts {
 		}
 	}
 
-	public static void equals(String expect, int[] actual) {
-		String actualStr = PrintTool.printArray(actual);
-		if (!expect.equals(actualStr)) {
-			throw new IllegalStateException("expect: " + expect + ",actual: " + actualStr);
-		}
-
-	}
-
-	public static void equals(ListNode expect, ListNode actual) {
-		if (expect.val != actual.val) {
-			throw new IllegalStateException("expect: " + expect + ",actual: " + actual);
-		}
-
-	}
-
 	public static void isTrue(boolean state) {
 		if (!state) {
 			throw new IllegalStateException("expect: true,actual: false");
@@ -85,24 +78,33 @@ public class Asserts {
 		}
 	}
 
-	public static String[] getStringArray(String... strings) {
-		if (strings.length == 0) {
+	public static String[] getStringArray(String ... strings){
+		if (strings.length == 0){
 			throw new IllegalStateException("string should not be null");
 		}
 		return strings;
 	}
 
-	public static int[] getIntArray(int... nums) {
-		if (nums.length == 0) {
+	public static int[] getIntArray(int ... nums){
+		if (nums.length == 0){
 			throw new IllegalStateException("num should not be null");
 		}
 		return nums;
 	}
 
-	public static int[] getIntArray(String numStr) {
-		numStr = numStr.replaceAll(" ", "");
-		numStr = numStr.substring(1, numStr.length() - 1);
-		String[] nums = numStr.split(",");
+
+	public static void equals(ListNode expect, ListNode actual) {
+		String actualStr = ListNode.getString(actual);
+		String expectStr = ListNode.getString(expect);
+		if (!expectStr.equals(actualStr)){
+			throw new IllegalStateException("expect: " + expectStr + ",actual: " + actualStr);
+		}
+	}
+
+	public static int[] getIntArray(String numStr){
+		numStr = numStr.trim().replaceAll(" ", "");
+		numStr = numStr.substring(1,numStr.length() -1);
+		String[] nums= numStr.split(",");
 		int[] result = new int[nums.length];
 		for (int i = 0; i < nums.length; i++) {
 			result[i] = Integer.parseInt(nums[i]);
@@ -111,7 +113,10 @@ public class Asserts {
 	}
 
 	public static List<Integer> getIntList(String str) {
-		str = str.trim().substring(1, str.length() - 1);
+		if (str.equals("[]")) {
+			return new ArrayList<>();
+		}
+		str = str.trim().substring(1,str.length()-1);
 		String[] nums = str.split(",");
 		List<Integer> numList = new ArrayList<>();
 		for (String num : nums) {
@@ -120,8 +125,8 @@ public class Asserts {
 		return numList;
 	}
 
-	public static int[][] getInt2DArrayFromString(String numStr) {
-		numStr = numStr.substring(2, numStr.length() - 2);
+	public static int[][] getInt2DArrayFromString(String numStr){
+		numStr = numStr.trim().substring(2,numStr.length() - 2);
 		String[] split = numStr.split("],\\[");
 		int row = split.length;
 		int[][] result = new int[row][];

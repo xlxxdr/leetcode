@@ -1,5 +1,6 @@
 package studyPlan.programmingSkills.phase1;
 
+import java.awt.geom.RectangularShape;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -77,18 +78,13 @@ public class _589_preorder extends Asserts {
 
 	public List<Integer> preorder(Node root) {
 		if (root == null) {
-			return null;
+			return new ArrayList<>();
 		}
 		List<Integer> result = new ArrayList<>();
-		LinkedList<Node> nodes = new LinkedList();
-		nodes.add(root);
-		while (nodes.isEmpty()) {
-			Node node = nodes.getFirst();
-			List<Integer> values = new ArrayList<>();
-			values.add(node.val);
-			result.addAll(values);
-			if (!node.children.isEmpty()){
-				nodes.addAll(0,node.children);
+		result.add(root.val);
+		if (!root.children.isEmpty()){
+			for (Node child : root.children) {
+				result.addAll(preorder(child));
 			}
 		}
 		return result;
