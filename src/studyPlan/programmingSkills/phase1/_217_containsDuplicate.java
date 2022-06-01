@@ -1,4 +1,4 @@
-package _2022_05_31;
+package studyPlan.programmingSkills.phase1;
 
 import java.util.HashMap;
 import java.util.Map;

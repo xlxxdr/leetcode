@@ -1,4 +1,4 @@
-package _2022_05_26;
+package studyPlan.programmingSkills.phase1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

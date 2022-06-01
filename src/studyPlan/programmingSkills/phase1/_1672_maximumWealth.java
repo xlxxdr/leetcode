@@ -1,4 +1,4 @@
-package _2022_05_27;
+package studyPlan.programmingSkills.phase1;
 
 import tools.Asserts;
 

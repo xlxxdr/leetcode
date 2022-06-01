@@ -1,7 +1,4 @@
-package tmp;
-
-import java.util.Arrays;
-import java.util.Comparator;
+package studyPlan.programmingSkills.phase1;
 
 import tools.Asserts;
 //给你两个整数 x 和 y ，表示你在一个笛卡尔坐标系下的 (x, y) 处。同时，在同一个坐标系下给你一个数组 points ，其中 points[i] =

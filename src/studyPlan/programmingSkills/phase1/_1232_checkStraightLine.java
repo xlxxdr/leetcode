@@ -1,7 +1,4 @@
-package tmp;
-
-import java.util.Arrays;
-import java.util.Comparator;
+package studyPlan.programmingSkills.phase1;
 
 import tools.Asserts;
 

@@ -1,4 +1,4 @@
-package _2022_05_27;
+package studyPlan.programmingSkills.phase1;
 
 import tools.Asserts;
 //给你一个正整数数组 arr ，请你计算所有可能的奇数长度子数组的和。

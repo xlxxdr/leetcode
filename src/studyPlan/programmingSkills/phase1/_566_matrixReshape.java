@@ -1,4 +1,4 @@
-package _2022_06_01;
+package studyPlan.programmingSkills.phase1;
 
 import tools.Asserts;
 //在 MATLAB 中，有一个非常有用的函数 reshape ，它可以将一个 m x n 矩阵重塑为另一个大小不同（r x c）的新矩阵，但保留其原始数据。

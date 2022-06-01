@@ -1,4 +1,4 @@
-package _2022_05_26;
+package tmp;
 
 import java.util.Arrays;
 import java.util.HashMap;

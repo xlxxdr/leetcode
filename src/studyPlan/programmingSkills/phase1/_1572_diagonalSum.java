@@ -1,4 +1,4 @@
-package _2022_05_27;
+package studyPlan.programmingSkills.phase1;
 
 import tools.Asserts;
 //给你一个正方形矩阵 mat，请你返回矩阵对角线元素的和。

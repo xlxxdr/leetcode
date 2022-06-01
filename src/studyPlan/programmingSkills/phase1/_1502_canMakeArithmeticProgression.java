@@ -1,4 +1,4 @@
-package tmp;
+package studyPlan.programmingSkills.phase1;
 
 import java.util.Arrays;
 
