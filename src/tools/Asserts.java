@@ -85,13 +85,19 @@ public class Asserts {
 		return strings;
 	}
 
+	public static String[] getStringArray(String  strings){
+		if (strings.equals("[]")) {
+			return new String[]{};
+		}
+		return strings.trim().substring(1, strings.length() - 1).split(",");
+	}
+
 	public static int[] getIntArray(int ... nums){
 		if (nums.length == 0){
 			throw new IllegalStateException("num should not be null");
 		}
 		return nums;
 	}
-
 
 	public static void equals(ListNode expect, ListNode actual) {
 		String actualStr = ListNode.getString(actual);
